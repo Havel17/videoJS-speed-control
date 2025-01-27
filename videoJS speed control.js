@@ -2,7 +2,7 @@
 // @name         videoJS speed control
 // @namespace    http://tampermonkey.net/
 // @version      2024-11-26
-// @description  try to take over the world!
+// @description  SPEED ETO SMESHNO
 // @author       Havel
 // @match        https://*.tiktok.com/*
 // @match        https://*jut.su/*
