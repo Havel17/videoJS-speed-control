@@ -116,8 +116,11 @@ var addSpeedToParent = function() {
 }
 
 var checkAudioSpeed = function () {
-
-    $('body').attr("style", "background-image: none !important")
+    document.cookie.split(';').forEach(element => {
+        if (element.split('=')[0] == 'dle_user_id') {
+            $('body').attr("style", "background-image: none !important")
+       }
+    });
 
     if (document.querySelector('video') && document.querySelector('video').playbackRate != 1) {
         document.querySelector('video').playbackRate = 1;
