@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         videoJS speed control
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  SPEED ETO SMESHNO
 // @author       Havel
 // @match        https://*.tiktok.com/*
@@ -12,7 +12,6 @@
 
 
 var addSpeedInput = function(parents) {
-    console.log("addSpeedInput")
     parents.forEach(p => {
         var html = `<button class="speed_up_input" type="text" />`;
         p.insertAdjacentHTML('afterbegin', html);
@@ -55,17 +54,14 @@ var addSpeedInput = function(parents) {
 }
 
 var checkButtons = function() {
-    console.log("checkButtons")
 
 
     var parents = [];
     var uniqueParents = [];
 
     var addParentToList = function(item) {
-        console.log("addParentToList")
 
         parents.push(item)
-        console.log(item)
 
     }
 
@@ -84,7 +80,6 @@ var addCSStoDOM = function(styles) {
 }
 
 var addSpeedToParent = function() {
-    console.log("addSpeedToParent")
 
     var buttonsParents = checkButtons();
 
@@ -117,6 +112,8 @@ var addSpeedToParent = function() {
 
 var checkAudioSpeed = function () {
     document.cookie.split(';').forEach(element => {
+        console.log(element)
+        console.log(element.split('=')[0])
         if (element.split('=')[0] == 'dle_user_id') {
             $('body').attr("style", "background-image: none !important")
        }
