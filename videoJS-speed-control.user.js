@@ -115,6 +115,8 @@ var checkAudioSpeed = function () {
     if (p && p.playbackRate != 1) {
         p.playbackRate = 1;
     }
+
+    if (p.ontimeupdate)
     p.ontimeupdate = () => {
       //if (!window.is_skip) return;
       if (p.currentTime > window.video_intro_start && p.currentTime < window.video_intro_end && p.currentTime > 5) p.currentTime = window.video_intro_end;
