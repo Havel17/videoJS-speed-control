@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         videoJS speed control
 // @namespace    http://tampermonkey.net/
-// @version      1.16
+// @version      1.17
 // @description  SPEED ETO SMESHNO
 // @author       Havel
 // @match        https://*.tiktok.com/*
@@ -116,11 +116,12 @@ var checkAudioSpeed = function () {
         p.playbackRate = 1;
     }
 
-    if (p.ontimeupdate)
-    p.ontimeupdate = () => {
-      //if (!window.is_skip) return;
-      if (p.currentTime > window.video_intro_start && p.currentTime < window.video_intro_end && p.currentTime > 5) p.currentTime = window.video_intro_end;
-      //if (p.currentTime > window.video_outro_start && p.currentTime > 5) end_episode();
+    if (p.ontimeupdate) {
+        p.ontimeupdate = () => {
+            //if (!window.is_skip) return;
+            if (p.currentTime > window.video_intro_start && p.currentTime < window.video_intro_end && p.currentTime > 5) p.currentTime = window.video_intro_end;
+            //if (p.currentTime > window.video_outro_start && p.currentTime > 5) end_episode();
+        }
     }
     addSpeedToParent();
 
