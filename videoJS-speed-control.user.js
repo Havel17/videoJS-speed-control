@@ -151,6 +151,10 @@ var style = `
 .border_around_video{
     max-width:100% !important
 }
+.dark_mode .main{
+border-left: 3px solid #3c4c4000
+border-right: 3px solid #3c4c4000
+}
 `
 addCSStoDOM(style);
 var selected_speed = [0.25,0.5,1,1.25,1.4,1.5,1.75,2,3];
