@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         videoJS speed control
 // @namespace    http://tampermonkey.net/
-// @version      1.20
+// @version      1.21
 // @description  SPEED ETO SMESHNO
 // @author       Havel
 // @match        https://*.tiktok.com/*
 // @match        https://*jut.su/*
+// @match        https://*jutsu844.ru/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tiktok.com
 // @grant        none
 // ==/UserScript==
